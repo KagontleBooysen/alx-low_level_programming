@@ -1,37 +1,37 @@
 #include <stdio.h>
 
 /**
-* main - prints all possible combinations of two two-digit numbers.
-*
-* Return: 0
-*/
-
+ * main - loop through variables a,b,c printing digits
+ *
+ * Return: print to stdout all possible different combinations of three digits
+ */
 int main(void)
 {
-int i;
-int j;
+int a = 0;
+int b;
 
-for (i = 0; i < 100; i++)
+while (a <= 98) /*run following while a less than or equal to 98*/
 {
-for (j = 0; j < 100; j++)
+b = a + 1; /*b is always one more than a*/
+while (b <= 99) /*run following until b equal to 99*/
 {
-if (j > i)
-{
-putchar(i / 10 + '0');
-putchar(i % 10 + '0');
+putchar(a / 10 % 10 + '0');
+putchar(a % 10 + '0');
 putchar(' ');
-putchar(j / 10 + '0');
-putchar(j % 10 + '0');
-
-if (i * 100 + j != 9899)
+putchar(b / 10 % 10 + '0');
+putchar(b % 10 + '0');
+if (a == 98 && b == 99)
+{
+putchar('\n');
+}
+else
 {
 putchar(',');
 putchar(' ');
 }
+b++;
 }
+a++; /*increment this loop by 1*/
 }
-}
-putchar('\n');
-
 return (0);
-}}
+}
