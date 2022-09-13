@@ -1,14 +1,14 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
-* main - Print the word "Holberton"
+* main - Print the word "main"
 *
 * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	char h[] = "Holberton";
+	char h[] = "main";
 	int i;
 
 	for (i = 0; i < 9; i++)
