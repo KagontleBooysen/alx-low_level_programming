@@ -1,36 +1,43 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
-  * main - entry point.
-  * Return: 0 on success.
-  */
+ * main - principal function.
+ *
+ * Return: 0.
+ */
+
 int main(void)
 {
 	int i;
 
 	for (i = 1; i <= 100; i++)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
+		if (i % 15 == 0)
 		{
-			printf("%s ", "FizzBuzz");
+			printf("FizzBuzz ");
 		}
-		if (i % 3 == 0 && i % 5 != 0)
+		else if (i % 3 == 0)
 		{
-			printf("%s ", "Fizz");
+			printf("Fizz ");
 		}
-		else if (i % 5 == 0 && i % 3 != 0)
+		else if (i % 5 == 0)
 		{
 			if (i != 100)
-				printf("%s ", "Buzz");
+			{
+				printf("Buzz ");
+			}
 			else
-				printf("%s", "Buzz");
+			{
+				printf("Buzz");
+			}
 		}
 		else
 		{
-			printf("%d ", i);
+			printf("%d", i);
+			printf(" ");
 		}
 	}
-	printf("%c", '\n');
+	printf("\n");
+
 	return (0);
 }
