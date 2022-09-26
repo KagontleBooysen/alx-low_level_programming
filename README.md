@@ -1,1 +1,1 @@
-Task0._putchar
+Task0.memset
